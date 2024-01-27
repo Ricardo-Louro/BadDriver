@@ -18,8 +18,8 @@ public class CarMovement : MonoBehaviour
         public Axel axel;
     }
 
-    [SerializeField] private float maxAcceleration = 35.0f;
-    [SerializeField] private float breakAcceleration;
+    [SerializeField] private float maxAcceleration;
+    [SerializeField] private float brakeAcceleration;
 
     [SerializeField] private List<Wheel> wheels;
 
@@ -29,11 +29,16 @@ public class CarMovement : MonoBehaviour
     private float moveInput;
     private float steerInput;
 
+    public Vector3 centerOfMass;
+
     private Rigidbody carRb;
+
+    public Rigidbody Rb => carRb;
 
     private void Start()
     {
         carRb = GetComponent<Rigidbody>();
+        carRb.centerOfMass = centerOfMass;
     }
 
     private void Update()
@@ -45,6 +50,7 @@ public class CarMovement : MonoBehaviour
     {
         Move();
         Steer();
+        Brake();
     }
 
     private void GetInputs()
@@ -72,5 +78,24 @@ public class CarMovement : MonoBehaviour
             }
         }
 
+    }
+
+    private void Brake()
+    {
+        if(Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("BRAKING");
+            foreach(var wheel in wheels)
+            {
+                wheel.wheelCollider.brakeTorque = brakeAcceleration * 300 * Time.deltaTime;
+            }
+        }
+        else
+        {
+            foreach(var wheel in wheels)
+            {
+                wheel.wheelCollider.brakeTorque = 0;
+            }
+        }
     }
 }
