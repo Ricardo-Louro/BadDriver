@@ -5,9 +5,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class FireBulletOnValidate : MonoBehaviour
 {
-    [SerializeField] private GameObject bullet;
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float fireSpeed = 20f;
+    [SerializeField] private GameObject         bullet;
+    [SerializeField] private Transform          spawnPoint;
+    [SerializeField] private float              fireSpeed = 20f;
 
     // Start is called before the first frame update
     private void Start()

@@ -6,8 +6,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class NewBehaviourScript : XRGrabInteractable
 {
-    [SerializeField] private Transform leftAttachTransform;
-    [SerializeField] private Transform rightAttachTransform;
+    [SerializeField] private Transform          leftAttachTransform;
+    [SerializeField] private Transform          rightAttachTransform;
 
     public override Transform GetAttachTransform(IXRInteractor interactor)
     {
