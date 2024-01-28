@@ -5,7 +5,7 @@ public class CarMoveForward : MonoBehaviour
 {
     [SerializeField] private bool       gameStart;
     [SerializeField] private float      moveSpeed;
-    [SerializeField] private bool       grounded;
+    [SerializeField] public bool        grounded = false;
     
     private Rigidbody rb;
 
