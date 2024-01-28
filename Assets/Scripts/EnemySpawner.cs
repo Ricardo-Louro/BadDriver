@@ -4,22 +4,22 @@ public class EnemySpawner : MonoBehaviour
 {
     private static bool activeChaser = false;
 
-    [SerializeField] private GameObject[] chasers;
+    [SerializeField] private GameObject     chaser;
 
-    [SerializeField] private Transform bottomLeft;
-    [SerializeField] private Transform topRight;
-    [SerializeField] private Transform roadLeft;
-    [SerializeField] private Transform roadRight;
+    [SerializeField] private Transform      bottomLeft;
+    [SerializeField] private Transform      topRight;
+    [SerializeField] private Transform      roadLeft;
+    [SerializeField] private Transform      roadRight;
 
-    [SerializeField] private float height;
+    [SerializeField] private float          height;
 
-    private float bottomEdge;
-    private float topEdge;
-    private float leftEdge;
-    private float rightEdge;
+    private float                           bottomEdge;
+    private float                           topEdge;
+    private float                           leftEdge;
+    private float                           rightEdge;
 
-    private float roadLeftEdge;
-    private float roadRightEdge;
+    private float                           roadLeftEdge;
+    private float                           roadRightEdge;
 
     // Start is called before the first frame update
     void Start()
@@ -28,8 +28,9 @@ public class EnemySpawner : MonoBehaviour
         {
             CalculateEdges();
 
-            GameObject chaser = Instantiate(chasers[Random.Range(0, chasers.Length)]);
-            chaser.transform.position = ChooseSpawn();
+            GameObject chaser_obj = Instantiate(chaser);
+            Debug.Log("ENEMY SPAWNED!");
+            chaser_obj.transform.position = ChooseSpawn();
         }
     }
 

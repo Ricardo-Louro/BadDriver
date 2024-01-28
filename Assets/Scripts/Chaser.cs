@@ -14,7 +14,7 @@ public class Chaser : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        playerRb = player.GetComponent<Rigidbody>();
+        playerRb = player.GetComponentInParent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private EnemySpawner spawner;
+    private EnemySpawner spawner;
     private Chaser chaser;
     private Rigidbody rb;
     [SerializeField] private int health;
@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        spawner = FindObjectOfType<EnemySpawner>();
         chaser = gameObject.GetComponent<Chaser>();
         rb = gameObject.GetComponent<Rigidbody>();
     }
@@ -21,6 +22,7 @@ public class Enemy : MonoBehaviour
         if(health == 0)
         {
             Die();
+            spawner.QueueSpawn();
         }
     }
 
