@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5071116064458910486}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Right Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 6438036190699908363}
   - component: {fileID: 5731833793158438135}
   - component: {fileID: 8860121088588873167}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Pistol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 3819140229894130535, guid: e582b53f8bc06e84d8ed0cc09d2b20cf, type: 3}
   spawnPoint: {fileID: 8623751534258502828}
-  fireSpeed: 20
+  bulletSpeed: 20
+  fireCooldown: 0.5
+  maxAmmo: 5
 --- !u!114 &8860121088588873167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,7 +299,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6260282269406454234}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Left Attach
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +330,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8623751534258502828}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bullet Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +363,7 @@ GameObject:
   - component: {fileID: 3588025767877916246}
   - component: {fileID: 1073147887885753416}
   - component: {fileID: 1194669285040957472}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Mesh2_Group3_Group1_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +446,7 @@ GameObject:
   - component: {fileID: 306019255176626345}
   - component: {fileID: 5621717599130271722}
   - component: {fileID: 8533481728921631943}
-  m_Layer: 9
+  m_Layer: 3
   m_Name: Mesh1_Group2_Group1_Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class NewBehaviourScript : XRGrabInteractable
+public class XRGrabInteractableTwoAttach : XRGrabInteractable
 {
     [SerializeField] private Transform          leftAttachTransform;
     [SerializeField] private Transform          rightAttachTransform;
