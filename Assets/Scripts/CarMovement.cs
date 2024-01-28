@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CarMovement : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class CarMovement : MonoBehaviour
 
     [SerializeField] private float turnSensitivity;
     [SerializeField] private float maxSteerAngle;
+
+    [SerializeField] private InputActionProperty analogMove;
+    [SerializeField] private InputActionProperty y;
+
 
     private float moveInput;
     private float steerInput;
