@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Bullets"))
+        if(collision.gameObject.CompareTag("Bullet"))
         {
             Debug.Log("I GOT SHOT!");
         }
