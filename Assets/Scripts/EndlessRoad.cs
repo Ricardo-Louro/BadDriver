@@ -14,6 +14,10 @@ public class EndlessRoad : MonoBehaviour
     void Start()
     {
         _car = GameObject.FindObjectOfType<CarMoveForward>();    
+        if (_car == null)
+        {
+            Debug.LogWarning("No CarMoveForward behaviour found in Scene!! :(");
+        }
     }
 
     // Update is called once per frame
