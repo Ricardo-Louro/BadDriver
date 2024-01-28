@@ -26,7 +26,7 @@ public class EndlessRoad : MonoBehaviour
     {
         if(Vector3.Distance(_car.transform.position, _lastNodePos) <= 50f && Time.time - _lastSpawnTime >= 0.2f)
         {
-            Destroy(lastNode);
+            //Destroy(lastNode);
             GameObject newNode = GameObject.Instantiate(_roadFab);
             lastNode = newNode;
 
