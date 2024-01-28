@@ -7,6 +7,8 @@ public class GroundChecker : MonoBehaviour
     private new Collider collider;
     private CarMoveForward carMoveForward;
 
+    private Collider currentCol;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -16,13 +18,16 @@ public class GroundChecker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        currentCol = other;
         Debug.Log("hit the ground");
         carMoveForward.grounded = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log("left the ground");
-        carMoveForward.grounded = false;
+        if(currentCol == collider)
+        {
+            carMoveForward.grounded = false;
+        }
     }
 }

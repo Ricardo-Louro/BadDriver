@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class CarMoveForward : MonoBehaviour
 {
-    [SerializeField] private bool       gameStart;
+    [SerializeField] private bool       gameStart = true;
     [SerializeField] private float      moveSpeed;
     [SerializeField] public bool        grounded = false;
     
     private Rigidbody rb;
+    public Rigidbody Rb => rb;
 
     private void Start()
     {
@@ -15,9 +16,9 @@ public class CarMoveForward : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if(gameStart && grounded)
+        if(gameStart)
         {
-            rb.velocity = transform.forward * moveSpeed * Time.deltaTime;
+            rb.velocity = new Vector3(0, rb.velocity.y, moveSpeed * Time.deltaTime);
         }
     }
 }

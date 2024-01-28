@@ -10,7 +10,8 @@ public class Ramp : MonoBehaviour
     {
         Debug.Log(other.name);
 
-        CarMovement carMov = other.GetComponentInParent<CarMovement>();
+        CarMoveForward carMov = other.GetComponentInParent<CarMoveForward>();
+        
         if(carMov != null)
         {
             carMov.Rb.AddForce(transform.forward * speedValue, ForceMode.Force);
