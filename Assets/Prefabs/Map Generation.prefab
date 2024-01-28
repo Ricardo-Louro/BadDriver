@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1782207041791153723}
+  - component: {fileID: 6192461066556646878}
   m_Layer: 0
   m_Name: Map Generation
   m_TagString: Untagged
@@ -31,3 +32,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6192461066556646878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405563766335854172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa542c915bc0db4b9e97efc1bd82d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roadFab: {fileID: 5309219866015093019, guid: 076cb1303dd3e37459f2604d9a38320f,
+    type: 3}
