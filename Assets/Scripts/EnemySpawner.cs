@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    private static bool activeChaser = false;
-
     [SerializeField] private GameObject     chaser;
 
     [SerializeField] private Transform      bottomLeft;
@@ -24,14 +22,9 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!activeChaser)
-        {
-            CalculateEdges();
-
-            GameObject chaser_obj = Instantiate(chaser);
-            Debug.Log("ENEMY SPAWNED!");
-            chaser_obj.transform.position = ChooseSpawn();
-        }
+        CalculateEdges();
+        GameObject chaser_obj = Instantiate(chaser);
+        chaser_obj.transform.position = ChooseSpawn();
     }
 
     private Vector3 ChooseSpawn()
@@ -65,10 +58,5 @@ public class EnemySpawner : MonoBehaviour
 
         roadLeftEdge = roadLeft.position.x;
         roadRightEdge = roadRight.position.x;
-    }
-
-    public void QueueSpawn()
-    {
-        activeChaser = false;
     }
 }

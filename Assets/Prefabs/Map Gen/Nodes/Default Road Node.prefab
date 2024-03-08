@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1993f9f2ba675724d81d93feb62691cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaser: {fileID: 757416888634759535, guid: f9f1b7c098f2ab14b9e04b54abe8db9c, type: 3}
+  chaser: {fileID: 8422480863947959652, guid: f9f1b7c098f2ab14b9e04b54abe8db9c, type: 3}
   bottomLeft: {fileID: 537763196210915368}
   topRight: {fileID: 4270656946991107241}
   roadLeft: {fileID: 4785148892810244295}
@@ -399,7 +399,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5309219866015093019}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

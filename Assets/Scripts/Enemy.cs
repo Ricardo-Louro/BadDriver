@@ -22,7 +22,6 @@ public class Enemy : MonoBehaviour
         if(health == 0)
         {
             Die();
-            spawner.QueueSpawn();
         }
     }
 
@@ -33,8 +32,6 @@ public class Enemy : MonoBehaviour
         rb.velocity = new Vector3();
 
         //TRIGGER DEATH ANIMATION
-
-        spawner.QueueSpawn();
         StartCoroutine(WaitToDestroy(seconds));
     }
 

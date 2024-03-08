@@ -93,9 +93,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 118
   m_CollisionDetection: 2
 --- !u!114 &4254550636653908805
 MonoBehaviour:
@@ -109,8 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65f21416da9569448a8fd0b6a0009f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameStart: 1
-  moveSpeed: 300
+  moveSpeed: 2
 --- !u!1 &6358666549754108296
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +464,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 112
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7645734192548115221, guid: 13bc59428dab91049876b55a27af65c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

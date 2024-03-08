@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class CarMoveForward : MonoBehaviour
 {
-    [SerializeField] private bool       gameStart = true;
     [SerializeField] private float      moveSpeed;
+
+    private Vector3 moveVector;
     
     private Rigidbody rb;
     public Rigidbody Rb => rb;
@@ -12,12 +13,11 @@ public class CarMoveForward : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        moveVector = rb.position;
     }
     private void FixedUpdate()
     {
-        if(gameStart)
-        {
-            rb.velocity = new Vector3(0, rb.velocity.y, moveSpeed * Time.deltaTime);
-        }
+        moveVector.z += moveSpeed * Time.fixedDeltaTime;
+        rb.position = moveVector;
     }
 }

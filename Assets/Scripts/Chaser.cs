@@ -7,14 +7,13 @@ public class Chaser : MonoBehaviour
     [SerializeField] private float chaseDistance;
     [SerializeField] private float chaseSpeed;
     private GameObject player;
-    private Rigidbody playerRb;
+    [SerializeField] private Rigidbody carRb;
     private Rigidbody rb;
    
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-        playerRb = player.GetComponentInParent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -22,16 +21,18 @@ public class Chaser : MonoBehaviour
     void Update()
     {
         Vector3 distanceVector = player.transform.position - transform.position;
-        
+
         transform.LookAt(player.transform.position);
 
         if(distanceVector.magnitude > chaseDistance)
-        {
-            rb.velocity = transform.forward * chaseSpeed * Time.deltaTime;
+{
+            Vector3 velocityVector = transform.forward * (chaseSpeed * Time.deltaTime);
+            rb.velocity = velocityVector;
         }
         else
         {
-            rb.velocity = transform.forward * playerRb.velocity.magnitude;
+            Vector3 velocityVector = transform.forward * carRb.velocity.magnitude;
+            rb.velocity = velocityVector;
         }
     }
 }
