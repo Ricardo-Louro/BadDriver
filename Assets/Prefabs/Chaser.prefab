@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseDistance: 20
-  chaseSpeed: 600
+  chaseSpeed: 1000
   carRb: {fileID: 6288703627705746190, guid: a13a9f3ae78fe39428b3d918289559df, type: 3}
 --- !u!114 &5236278612014455649
 MonoBehaviour:
